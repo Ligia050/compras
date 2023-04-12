@@ -1,0 +1,10 @@
+{% extends "listas/layout.html" %}
+
+{% block body %}
+    <h1>Lista de compras:</h1>
+    <ul>
+        {% for listas in listas %}
+        <li><a href="{% url 'lista' listas.id %}">listas {{ listas.id }}</a>:{{listas.nome}}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

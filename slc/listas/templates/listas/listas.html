@@ -1,0 +1,17 @@
+{% extends "listas/layout.html" %}
+
+{% block body %}
+<h1>listas {{ lista.nome }}</h1>
+<a href="{% url 'index' %}">All Flights</a>
+
+<h2>Produtos:</h2>
+<ul>
+    {% for produtos in proutos %}
+        <li>{{ produtos }}</li>
+    {% empty %}
+        <li>Não há produto algum.</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
+
