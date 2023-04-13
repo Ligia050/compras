@@ -1,10 +1,19 @@
 from django.shortcuts import render
+from .models import Listas, Itens
+from django.http import HttpResponseRedirect
+from django.urls import reverse
+
 
 def index(request):
-    return render(request, "listas/index.html")
+    return render(request, "listas/index.html", {
+        "listas": Listas.objects.all()
+    })
 
-def listas(request, listas_id):
-    listas = listas.objects.get(id=listas_id)
+def listas(request, id):
+    listas = Listas.objects.get(id=id)
+    itens = Itens.objects.all()
+
     return render(request, "listas/listas.html", {
-        "listas": listas
+        "listas": listas,
+        "itens": itens
     })

@@ -2,14 +2,14 @@
 
 {% block body %}
 <h1>listas {{ lista.nome }}</h1>
-<a href="{% url 'index' %}">All Flights</a>
+<a href="{% url 'index' %}">login, pq ?</a>
 
 <h2>Produtos:</h2>
 <ul>
-    {% for produtos in proutos %}
-        <li>{{ produtos }}</li>
+    {% for item in itens %}
+        <li>{{ item }}</li>
     {% empty %}
-        <li>Não há produto algum.</li>
+        <li>Não há item algum.</li>
     {% endfor %}
 </ul>
 
