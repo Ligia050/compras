@@ -1,14 +1,16 @@
-% extends "users/layout.html" %
+{% extends "users/layout.html" %}
 
 {% block body %}
     {% if message %}
         <div>{{ message }}</div>
     {% endif %}
 
-    <form action="{% url 'login' %}" method="post">
+    <form action="{% url 'login' %}" action='recebe-dados.php' method="post">
         {% csrf_token %}
-        <input type="text", name="username", placeholder="Username">
-        <input type="password", name="password", placeholder="Password">
+        <label for="nome">Nome</label>
+        <input type="text", name="username", placeholder="">
+        <label for="senha">Senha</label>
+        <input type="password", name="password", placeholder="Senha">
         <input type="submit", value="Login">
     </form>
 {% endblock %}

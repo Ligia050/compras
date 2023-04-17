@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Listas, Itens
+from .models import *
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 
@@ -17,3 +17,4 @@ def listas(request, id):
         "listas": listas,
         "itens": itens
     })
+

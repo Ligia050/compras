@@ -1,17 +1,18 @@
 {% extends "listas/layout.html" %}
 
 {% block body %}
-<h1>listas {{ lista.nome }}</h1>
-<a href="{% url 'index' %}">login, pq ?</a>
+    <h1>Listas {{ Lista.nome_lista }}</h1>
+   <a href="{% url 'listas:index' %}" >Todas as listas</a>
 
-<h2>Produtos:</h2>
-<ul>
-    {% for item in itens %}
-        <li>{{ item }}</li>
-    {% empty %}
-        <li>Não há item algum.</li>
-    {% endfor %}
-</ul>
+    <h2>Produtos:</h2>
+    <ul>
+        {% for item in itens %}
+            <li>{{ item }}</li>
+        {% empty %}
+            <li>Não há item algum.</li>
+        {% endfor %}
+    </ul>
 
+   
 {% endblock %}
 
