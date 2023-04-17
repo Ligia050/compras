@@ -4,13 +4,13 @@
     {% if message %}
         <div>{{ message }}</div>
     {% endif %}
-
+<h2>Por favor, preencha os campos abaixo: </h2>
     <form action="{% url 'login' %}" action='recebe-dados.php' method="post">
         {% csrf_token %}
-        <label for="nome">Nome</label>
-        <input type="text", name="username", placeholder="">
-        <label for="senha">Senha</label>
-        <input type="password", name="password", placeholder="Senha">
+       <li><label for="nome">Nome</label>
+        <input type="text", name="username", placeholder=""></li> 
+       <li><label for="senha">Senha</label>
+        <input type="password", name="password", placeholder="Senha"></li> 
         <input type="submit", value="Login">
     </form>
 {% endblock %}

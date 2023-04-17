@@ -4,7 +4,7 @@
     <h1>Lista de compras:</h1>
     <ul>
         {% for listas in listas %}
-        <li><a href="{% url 'listas:listas' listas.id %}">listas </a>:{{listas.nome_lista}}</li>
+        <li><a href="{% url 'listas:listas' listas.id %}">{{listas.nome_lista}} </a></li>
       
         {% endfor %}
     </ul>

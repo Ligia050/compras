@@ -2,6 +2,7 @@
 
 {% block body %}
     <h1>Olá, seja bem vindo ! {{ request.user.first_name }}</h1>
+    <a href="{% url 'listas:index' %}">Vizualizar listas de compras</a>
     <ul>
         <h3>Mais informações: </h3>
         <li>Nome de Usuário: {{ request.user.username }}</li>

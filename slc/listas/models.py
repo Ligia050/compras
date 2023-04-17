@@ -14,5 +14,5 @@ class Itens(models.Model):
     nome_lista  = models.ForeignKey(Listas, on_delete=models.CASCADE, related_name="Itens")
 
     def __str__(self):
-        return f"{self.nome_lista} -  {self.itens} {self.preco} "
+        return f"{self.itens} R$ {self.preco} "
 

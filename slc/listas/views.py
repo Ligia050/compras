@@ -11,7 +11,7 @@ def index(request):
 
 def listas(request, id):
     listas = Listas.objects.get(id=id)
-    itens = Itens.objects.all()
+    itens = Itens.objects.filter(nome_lista=id)
 
     return render(request, "listas/listas.html", {
         "listas": listas,
